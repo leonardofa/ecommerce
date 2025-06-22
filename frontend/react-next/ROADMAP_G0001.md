@@ -12,5 +12,5 @@ ___
 - edit product
 - enable product
 - disable product
-- delete unused product
+- delete unused product (stock 0 && disabled)
 ___
