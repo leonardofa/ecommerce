@@ -41,17 +41,17 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .csrf(AbstractHttpConfigurer::disable)
-            .cors(Customizer.withDefaults()) // Enable CORS with default configuration
+            .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Enable CORS with custom configuration
             .authorizeHttpRequests(authorize -> authorize
                 .requestMatchers("/h2-console/**").permitAll()
-                .requestMatchers("/", "/swagger-ui/**", "/api-docs/**").permitAll()
+                .requestMatchers("/health", "/swagger-ui/**", "/swagger-ui.html", "/api-docs/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/products/**").authenticated()
                 .requestMatchers("/api/products/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
             )
             .httpBasic(Customizer.withDefaults())
             .headers(headers -> headers
-                .addHeaderWriter((request, response) -> response.setHeader("X-Frame-Options", "SAMEORIGIN"))
+                .frameOptions(frameOptions -> frameOptions.sameOrigin())
             );
         return http.build();
     }

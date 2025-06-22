@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 
 // Create axios instance with base URL
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api',
+  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api',
 });
 
 // Add request interceptor to add Authorization header
