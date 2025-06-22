@@ -13,52 +13,52 @@ __create product__
   - name
   - price
   - initial stock
-- [ ] core red/green/refactor
+- [X] core red/green/refactor
   - content validation
   - unique validation (name)
   - sku generation
   - persistence save
-- [ ] infrastructure
-- [ ] documentation
-- [ ] security: only for admin
+- [X] infrastructure
+- [X] documentation
+- [X] security: only for admin
 
 * edit product by sku
-- [ ] core
+- [X] core
 - name
 - price
-- [ ] core red/green/refactor
+- [X] core red/green/refactor
     - content validation
     - unique validation
     - persistence save
-- [ ] infrastructure
-- [ ] documentation
-- [ ] security: only for admin
+- [X] infrastructure
+- [X] documentation
+- [X] security: only for admin
 
 * enable product by sku
-- [ ] core
-- [ ] core red/green/refactor
+- [X] core
+- [X] core red/green/refactor
     - enable if disable
     - persistence save
-- [ ] infrastructure
-- [ ] documentation
-- [ ] security: only for admin
+- [X] infrastructure
+- [X] documentation
+- [X] security: only for admin
 
 * disable product
-- [ ] core
-- [ ] core red/green/refactor
+- [X] core
+- [X] core red/green/refactor
     - enable if disable
     - persistence save
-- [ ] infrastructure
-- [ ] documentation
-- [ ] security: only for admin
+- [X] infrastructure
+- [X] documentation
+- [X] security: only for admin
 
 * delete unused product
-- [ ] core
-- [ ] core red/green/refactor
+- [X] core
+- [X] core red/green/refactor
     - content validation
     - unique validation
     - persistence save
-- [ ] infrastructure
-- [ ] documentation
-- [ ] security: only for admin
+- [X] infrastructure
+- [X] documentation
+- [X] security: only for admin
 ___
